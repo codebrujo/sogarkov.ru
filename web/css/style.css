@@ -1,0 +1,15 @@
+.container {
+    width: 1142px;
+    margin: 0 auto;
+}
+
+.iwindow {
+    background: black;
+    border: 2px solid #9d9d9d;
+    color: chartreuse;
+    font-family: Courier New;
+    font-size: 150%;
+    margin: 50px 70px;
+    padding: 20px 40px;
+    height: 600px;
+}
