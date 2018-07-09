@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   var typed = new Typed('#typed6', {
-    strings: ['Приветствую вас уважаемый посетитель!'],
+    strings: ['Приветствую вас, уважаемый посетитель!'],
     typeSpeed: 60,
     backSpeed: 0,
     startDelay: 1000,
