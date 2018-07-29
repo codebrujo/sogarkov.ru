@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # yii console commands
 /yii
 /yii_test
@@ -30,3 +31,7 @@ phpunit.phar
 
 # vagrant runtime
 /.vagrant
+=======
+/.idea
+.idea/workspace.xml
+>>>>>>> 982014800e99c4b2ffe870009e13db3ad8900b94
