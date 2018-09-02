@@ -6,6 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\tables\Chapters */
 
+$this->params['breadcrumbs'][] = ['label' => 'Admin', 'url' => ['../admin']];
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Chapters', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;

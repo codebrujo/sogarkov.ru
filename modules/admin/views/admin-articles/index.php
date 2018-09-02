@@ -8,6 +8,7 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Articles';
+$this->params['breadcrumbs'][] = ['label' => 'Admin', 'url' => ['../admin']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="articles-index">
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Articles', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Article', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -32,7 +33,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'short_descr:ntext',
             //'created_at',
             //'updated_at',
-            //'image_name',
+            'image_name',
+            'access_level',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

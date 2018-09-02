@@ -57,4 +57,14 @@ class Categories extends ActiveRecord
         return $this->hasMany(Articles::class, ['category_id' => 'id']);
     }
 
+    public static function getByChapterID($chapter_id)
+    {
+
+        return static::find()
+            ->where(['chapter_id' => $chapter_id])
+            ->all();
+
+    }
+
+
 }

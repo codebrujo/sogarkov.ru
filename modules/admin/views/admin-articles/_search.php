@@ -31,6 +31,8 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'image_name') ?>
 
+    <?php // echo $form->field($model, 'access_level') ?>
+
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>

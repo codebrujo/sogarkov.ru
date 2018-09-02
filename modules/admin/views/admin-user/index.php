@@ -7,6 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+$this->params['breadcrumbs'][] = ['label' => 'Admin', 'url' => ['../admin']];
 $this->title = 'Users';
 $this->params['breadcrumbs'][] = $this->title;
 ?>

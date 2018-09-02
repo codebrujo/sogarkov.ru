@@ -6,7 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\tables\Chapters */
 
-$this->title = 'Create Chapters';
+$this->params['breadcrumbs'][] = ['label' => 'Admin', 'url' => ['../admin']];
+$this->title = 'Create Chapter';
 $this->params['breadcrumbs'][] = ['label' => 'Chapters', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

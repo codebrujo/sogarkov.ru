@@ -6,7 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\tables\Articles */
 
-$this->title = 'Create Articles';
+$this->params['breadcrumbs'][] = ['label' => 'Admin', 'url' => ['../admin']];
+$this->title = 'Create Article';
 $this->params['breadcrumbs'][] = ['label' => 'Articles', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

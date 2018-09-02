@@ -6,9 +6,20 @@
  * Time: 20:22
  */
 /** @var \yii\web\View $this */
+/** @var array $categories */
+/** @var \app\models\tables\Categories $currentCategory */
+
+use yii\helpers\Html;
 use yii\helpers\Url;
+
 $this->title = 'Work';
-$this->params['breadcrumbs'][] = 'Work';
+if (is_null($currentCategory)){
+    $this->params['breadcrumbs'][] = $this->title;
+}else{
+    $this->params['breadcrumbs'][] = ['label' => $this->title, 'url' => ['work']];
+    $this->params['breadcrumbs'][] = $currentCategory->name;
+}
+
 
 $this->registerCssFile('../css/style.css',  ['position' => yii\web\View::POS_BEGIN]);
 $this->registerJsFile('../js/typed.min.js',  ['position' => yii\web\View::POS_END]);
@@ -21,16 +32,13 @@ $this->registerJsFile('../js/page.js',  ['position' => yii\web\View::POS_END]);
     <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="list-group">
-                <a href="#" class="list-group-item active">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
+                <?php foreach ($categories as $category): ?>
+                    <? $className = $category->id==$currentCategory->id ? 'list-group-item active' : 'list-group-item'; ?>
+                    <?= Html::a($category->name,
+                        Url::to(['work', 'category_id' => $category->id])
+                        , ['class' => $className])
+                    ; ?>
+                <?php endforeach; ?>
             </div>
         </div>
 

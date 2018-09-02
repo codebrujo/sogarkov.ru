@@ -12,6 +12,7 @@ namespace app\models\tables;
  * @property string $content
  * @property string $short_descr
  * @property string $image_name
+ * @property int $access_level
  * @property int $created_at
  * @property int $updated_at
  *
@@ -32,7 +33,7 @@ class Articles extends ActiveRecord
     public function rules()
     {
         return [
-            [['category_id'], 'integer'],
+            [['category_id', 'access_level'], 'integer'],
             [['name', 'content', 'short_descr'], 'string'],
             [['image_name'], 'string', 'max' => 255],
             [['created_at', 'updated_at'], 'safe'],

@@ -1,12 +1,12 @@
 <div class="admin-default-index">
     <h1><?= $this->context->action->uniqueId ?></h1>
     <p>
-        This is the view content for action "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
+        Below is the list of available CRUD actions.
     </p>
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
+    <div class="list-group">
+        <a href="../admin/admin-articles/" class="list-group-item">Articles</a>
+        <a href="../admin/admin-categories/" class="list-group-item">Categories</a>
+        <a href="../admin/admin-chapters/" class="list-group-item">Chapters</a>
+        <a href="../admin/admin-user/" class="list-group-item">Users</a>
+    </div>
 </div>

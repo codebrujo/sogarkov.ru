@@ -9,13 +9,23 @@
 namespace app\controllers;
 
 
+use app\models\tables\Categories;
 use yii\web\Controller;
 
 class ContentController extends Controller
 {
-    public function actionWork()
+    public function actionWork($category_id = 0)
     {
-        return $this->render('workindex', ['events' => $events, 'date' => $date]);
+        $categories = Categories::getByChapterID(1);
+        $currentCategory = new Categories();
+
+        if ($category_id>0){
+            $currentCategory = Categories::findOne($category_id);
+        }
+
+        return $this->render('workindex',
+            ['categories' => $categories, 'currentCategory' => $currentCategory]
+        );
     }
 
 }

@@ -44,6 +44,10 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
+        $admin = \Yii::$app->authManager->getRolesByUser(Yii::$app->user->id)['admin'];
+        if (!is_null($admin)){
+            $menuItems[] = ['label' => 'Admin', 'url' => ['/admin']];
+        }
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
