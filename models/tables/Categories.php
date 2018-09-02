@@ -49,14 +49,6 @@ class Categories extends ActiveRecord
         ];
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getByCategory()
-    {
-        return $this->hasMany(Articles::class, ['category_id' => 'id']);
-    }
-
     public static function getByChapterID($chapter_id)
     {
 
@@ -65,6 +57,5 @@ class Categories extends ActiveRecord
             ->all();
 
     }
-
 
 }

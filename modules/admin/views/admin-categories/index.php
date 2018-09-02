@@ -7,7 +7,6 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\CategoriesSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->params['breadcrumbs'][] = ['label' => 'Admin', 'url' => ['../admin']];
 $this->title = 'Categories';
 $this->params['breadcrumbs'][] = ['label' => 'Admin', 'url' => ['../admin']];
 $this->params['breadcrumbs'][] = $this->title;
