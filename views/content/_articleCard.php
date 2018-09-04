@@ -13,11 +13,11 @@ use yii\helpers\Url;
 ?>
 
 <div class="col-6 col-sm-6 col-lg-4">
- <h2><?= $article->name;?></h2>
- <p><?= $article->short_descr;?></p>
+ <h2><?= Html::decode($article->name);?></h2>
+ <p><?= Html::decode($article->short_descr);?></p>
  <p>
      <?= Html::a('Подробнее &raquo;',
-         Url::to(['work', 'article_id' => $article->id])
+         Url::to(['work', 'category_id' => $article->category_id, 'article_id' => $article->id])
          , ['class' => 'btn btn-default', 'role' => 'button'])
      ; ?>
  </p>
