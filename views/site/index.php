@@ -11,7 +11,7 @@ use yii\helpers\Url;
     <div class="jumbotron">
         <h1>Welcome!</h1>
 
-        <p class="lead">This is the personal web-page of Sergei Ogarkov.</p>
+        <p class="lead">This is Sergei Ogarkov's personal web-page.</p>
 
     </div>
 
